@@ -16,7 +16,7 @@ export default class UsersController {
     return response.status(201).send(user)
   }
 
-  public async show({ request, response, params }: HttpContextContract) {
+  public async show({ response, params }: HttpContextContract) {
     const user = await User.findOrFail(params.id)
 
     return response.status(201).send(user)
